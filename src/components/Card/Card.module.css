@@ -1,0 +1,50 @@
+.card {
+    position: relative;
+    padding: 30px;
+    background-color: #0a6f6b;
+    width: 300px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+@media (max-width: 460px) {
+    .card {
+        width: 100%;
+    }
+}
+
+.cardImage {
+    background-color: #FFF;
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cardCancel {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.cardLink {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFF;
+    margin-bottom: 20px;
+}
+
+.close {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
