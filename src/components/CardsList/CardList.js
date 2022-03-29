@@ -31,7 +31,7 @@ const CardList = () => {
                     <Card
                         image={item.image ? item.image.url : ''}
                         name={item.name}
-                        wiki={item.wikipedia_url}
+                        wiki={item.wiki}
                         key={item.id}
                         id={item.id}
                         closeCard={closeCard}
