@@ -7,7 +7,7 @@ const Card = ({image, name, wiki, id, closeCard, likeCard, like}) => {
   return (
     <div className={style.card}>
         <img 
-            src="/images/close.png"
+            src="images/close.png"
             alt='Kitty'
             className={style.close}
             onClick={() => closeCard(id)}
