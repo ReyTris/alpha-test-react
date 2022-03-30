@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/alpha-test-react/static/css/main.4fd6f014.css",
-    "main.js": "/alpha-test-react/static/js/main.14c60b12.js",
+    "main.js": "/alpha-test-react/static/js/main.eb94d5be.js",
     "index.html": "/alpha-test-react/index.html",
     "main.4fd6f014.css.map": "/alpha-test-react/static/css/main.4fd6f014.css.map",
-    "main.14c60b12.js.map": "/alpha-test-react/static/js/main.14c60b12.js.map"
+    "main.eb94d5be.js.map": "/alpha-test-react/static/js/main.eb94d5be.js.map"
   },
   "entrypoints": [
     "static/css/main.4fd6f014.css",
-    "static/js/main.14c60b12.js"
+    "static/js/main.eb94d5be.js"
   ]
 }
