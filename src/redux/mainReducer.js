@@ -1,9 +1,5 @@
 
-const SET_ALL_CARDS = 'SET_ALL_CARDS';
-const SET_LIKE = 'SET_LIKE';
-const DELETED_CARD = 'DELETED_CARD';
-const SET_LIKE_CARDS = 'SET_LIKE_CARDS';
-const SET_SHOW_ALL = 'SET_SHOW_ALL';
+import {SET_ALL_CARDS, SET_LIKE, DELETED_CARD, SET_LIKE_CARDS, SET_SHOW_ALL} from './actionTypes'
 
 const initialState = {
     cards: [],
@@ -53,7 +49,6 @@ export default function mainReducer(state = initialState, action) {
             return {
                 ...state,
                 cardsFilter: state.cards.filter(item => item.like),
-                // cardsFilter: state.cards
             }
 
         case SET_SHOW_ALL:
@@ -66,9 +61,3 @@ export default function mainReducer(state = initialState, action) {
             return state
     }
 }
-
-export const setAllCards = (cards) => ({type: SET_ALL_CARDS, payload: cards})
-export const setLike = (id) => ({type: SET_LIKE, payload: id})
-export const deletedCard = (id) => ({type: DELETED_CARD, payload: id})
-export const setLikeCards = () => ({type: SET_LIKE_CARDS})
-export const setShowAll = () => ({type: SET_SHOW_ALL})

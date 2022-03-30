@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import CardList from '../components/CardsList/CardList'
 import CardListFilter from '../components/CardsList/CardListFilter'
 import Header from '../components/Header/Header'
-import { setLikeCards, setShowAll } from '../redux/mainReducer'
+import { setLikeCards, setShowAll } from '../redux/actions'
 
 const Main = () => {
     const dispatch = useDispatch()

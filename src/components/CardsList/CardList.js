@@ -3,8 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Card from '../Card/Card'
 
 import style from './CardList.module.css'
-import { getCards } from '../../actions/getCards'
-import { deletedCard, setLike } from '../../redux/mainReducer'
+import { deletedCard, setLike, getCards } from '../../redux/actions'
 
 const CardList = () => {
     const dispatch = useDispatch()

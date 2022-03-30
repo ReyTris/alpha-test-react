@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Card from '../Card/Card'
 
 import style from './CardList.module.css'
-import { deletedCard, setLike } from '../../redux/mainReducer'
+import { deletedCard, setLike } from '../../redux/actions'
 
 const CardListFilter = () => {
     const dispatch = useDispatch()
