@@ -36,6 +36,20 @@ export default function mainReducer(state = initialState, action) {
                         }
                     }
                     return item
+                }),
+                cardsFilter: state.cardsFilter.map( item => {
+                    if (item.id === action.payload && !item.like) {
+                        return {
+                            ...item,
+                            like: true
+                        }
+                    } else if (item.id === action.payload && item.like) {
+                        return {
+                            ...item,
+                            like: false
+                        }
+                    }
+                    return item
                 })
             }
 
@@ -43,6 +57,7 @@ export default function mainReducer(state = initialState, action) {
             return {
                 ...state,
                 cards: state.cards.filter(item => item.id !== action.payload),
+                cardsFilter: state.cardsFilter.filter(item => item.id !== action.payload),
             }
 
         case SET_LIKE_CARDS:
