@@ -15,7 +15,7 @@ export default function mainReducer(state = initialState, action) {
         case SET_ALL_CARDS:
             return {
                 ...state,
-                cards: action.payload.map( item => ({...state.cards, 
+                cards: action.payload.map( item => ({ 
                     id: item.id,
                     name: item.name,
                     wiki: item.wikipedia_url,
@@ -26,7 +26,7 @@ export default function mainReducer(state = initialState, action) {
             
         case SET_LIKE:
             return {
-                ...state.cards,
+                ...state,
                 cards: state.cards.map( item => {
                     if (item.id === action.payload && !item.like) {
                         return {
@@ -45,22 +45,21 @@ export default function mainReducer(state = initialState, action) {
 
         case DELETED_CARD:
             return {
-                ...state.cards,
+                ...state,
                 cards: state.cards.filter(item => item.id !== action.payload),
-                cardsFilter: state.cards
             }
 
         case SET_LIKE_CARDS:
             return {
-                ...state.cards,
-                cards: state.cards.filter(item => item.like),
-                cardsFilter: state.cards
+                ...state,
+                cardsFilter: state.cards.filter(item => item.like),
+                // cardsFilter: state.cards
             }
 
         case SET_SHOW_ALL:
             return {
-                ...state.cards,
-                cards: state.cardsFilter
+                ...state,
+                cards: state.cards
             }
 
         default:
