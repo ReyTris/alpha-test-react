@@ -8,11 +8,11 @@ const Card = ({image, name, wiki, id, closeCard, likeCard, like}) => {
     <div className={style.card}>
         <img 
             src="images/close.png"
-            alt='Kitty'
+            alt='close'
             className={style.close}
             onClick={() => closeCard(id)}
             />
-        <img src={image} className={style.cardImage} alt="close"></img>
+        <img src={image} className={style.cardImage} alt="Kitty"></img>
         <div className={style.info}>
             <div className={style.cardTitle}>{name}</div>
             <a href={wiki} className={style.cardLink}>Больше информации (Wiki)</a>

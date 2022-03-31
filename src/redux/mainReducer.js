@@ -1,9 +1,10 @@
 
-import {SET_ALL_CARDS, SET_LIKE, DELETED_CARD, SET_LIKE_CARDS, SET_SHOW_ALL} from './actionTypes'
+import {SET_ALL_CARDS, SET_LIKE, DELETED_CARD, SET_LIKE_CARDS} from './actionTypes'
 
 const initialState = {
     cards: [],
-    cardsFilter: []
+    cardsFilter: [],
+    filter: false
 }
 
 export default function mainReducer(state = initialState, action) {
@@ -12,6 +13,13 @@ export default function mainReducer(state = initialState, action) {
             return {
                 ...state,
                 cards: action.payload.map( item => ({ 
+                    id: item.id,
+                    name: item.name,
+                    wiki: item.wikipedia_url,
+                    image: item.image,
+                    like: false
+                })),
+                cardsFilter: action.payload.map( item => ({ 
                     id: item.id,
                     name: item.name,
                     wiki: item.wikipedia_url,
@@ -64,12 +72,7 @@ export default function mainReducer(state = initialState, action) {
             return {
                 ...state,
                 cardsFilter: state.cards.filter(item => item.like),
-            }
-
-        case SET_SHOW_ALL:
-            return {
-                ...state,
-                cards: state.cards
+                filter: !state.filter
             }
 
         default:

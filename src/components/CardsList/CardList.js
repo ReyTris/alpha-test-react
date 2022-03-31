@@ -7,7 +7,12 @@ import { deletedCard, setLike, getCards } from '../../redux/actions'
 
 const CardList = () => {
     const dispatch = useDispatch()
-    const listCats = useSelector(state => state.main.cards)
+    const listCats = useSelector(state => {
+        if (state.main.filter) {
+            return state.main.cardsFilter
+        }
+        return state.main.cards
+    })
 
     
     function closeCard(id) {
