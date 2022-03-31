@@ -34,11 +34,11 @@
   width: 100px;
   height: 100px;
   cursor: pointer;
+  transition: all 0.5s;
 }
 
 .likeFilter:hover {
   transform: scale(1.2);
-  transition: all 0.5s;
 }
 
 img {
