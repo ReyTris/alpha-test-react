@@ -6,7 +6,6 @@
     transition: all 0.5s;
 }
 
-
 .like:hover {
     transform: scale(1.5);
 }
