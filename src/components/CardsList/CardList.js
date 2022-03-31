@@ -28,7 +28,7 @@ const CardList = () => {
             listCats.map(item => {
                 return (
                     <Card
-                        image={item.image ? item.image.url : ''}
+                        image={item.image ? item.image.url : 'images/fake.jpg'}
                         name={item.name}
                         wiki={item.wiki}
                         key={item.id}
