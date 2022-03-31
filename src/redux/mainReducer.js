@@ -18,13 +18,6 @@ export default function mainReducer(state = initialState, action) {
                     wiki: item.wikipedia_url,
                     image: item.image,
                     like: false
-                })),
-                cardsFilter: action.payload.map( item => ({ 
-                    id: item.id,
-                    name: item.name,
-                    wiki: item.wikipedia_url,
-                    image: item.image,
-                    like: false
                 }))
             }
             
@@ -32,20 +25,6 @@ export default function mainReducer(state = initialState, action) {
             return {
                 ...state,
                 cards: state.cards.map( item => {
-                    if (item.id === action.payload && !item.like) {
-                        return {
-                            ...item,
-                            like: true
-                        }
-                    } else if (item.id === action.payload && item.like) {
-                        return {
-                            ...item,
-                            like: false
-                        }
-                    }
-                    return item
-                }),
-                cardsFilter: state.cardsFilter.map( item => {
                     if (item.id === action.payload && !item.like) {
                         return {
                             ...item,
