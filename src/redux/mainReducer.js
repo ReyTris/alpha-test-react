@@ -37,6 +37,20 @@ export default function mainReducer(state = initialState, action) {
                         }
                     }
                     return item
+                }),
+                cardsFilter: state.cardsFilter.map( item => {
+                    if (item.id === action.payload && !item.like) {
+                        return {
+                            ...item,
+                            like: true
+                        }
+                    } else if (item.id === action.payload && item.like) {
+                        return {
+                            ...item,
+                            like: false
+                        }
+                    }
+                    return item
                 })
             }
 
